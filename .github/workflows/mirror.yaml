@@ -1,13 +1,12 @@
-name: Mirror to Gitee Repo
+name: Mirror Repo to Gitee
 
 on:
-  push:
   schedule:
-    - cron: "1 17 * * *"
+    - cron: "1 17 * * *" # 设置定时任务，中国时间凌晨1点进行同步
+  workflow_dispatch: # 手动触发构建
 
 jobs:
-  run:
-    name: Sync GitHub to Gitee
+  mirror:
     runs-on: ubuntu-latest
     steps:
       - name: git-sync
