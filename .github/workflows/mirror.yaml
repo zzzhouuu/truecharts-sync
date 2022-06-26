@@ -13,6 +13,6 @@ jobs:
         uses: wei/git-sync@v3
         with:
           source_repo: "https://github.com/truecharts/catalog.git"
-          source_branch: "refs/remotes/source/*"
+          source_branch: "main"
           destination_repo: "https://zhouu:${{ secrets.GITEE_TOKEN }}@gitee.com/zhouu/truecharts.git"
-          destination_branch: "refs/heads/*"
+          destination_branch: "main"
