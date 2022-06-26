@@ -14,5 +14,6 @@ jobs:
         with:
           source_repo: "https://github.com/truecharts/catalog.git"
           source_branch: "main"
-          destination_repo: "https://zhouu:${{ secrets.GITEE_TOKEN }}@gitee.com/zhouu/truecharts.git"
+          destination_repo: "git@gitee.com:zhouu/truenas-charts.git"
           destination_branch: "main"
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
